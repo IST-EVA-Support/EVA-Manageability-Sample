@@ -121,17 +121,17 @@ void CreateModelImage()
     printf("====================================================================================================\n");
     if(strcmp(input, "O") ==0 )
     {
-        system("cd /Model");
-        system("ls /Model | grep .bin");
+        system("cd ./Model");
+        system("ls ./Model | grep .bin");
 
-        strcpy(szDestination, "/Model/");
+        strcpy(szDestination, "./Model/");
     }
     else if(strcmp(input, "T") ==0 )
     {
-        system("cd /TensorModel");
-        system("ls /TensorModel | grep .engine");
+        system("cd ./TensorModel");
+        system("ls ./TensorModel | grep .engine");
 
-        strcpy(szDestination, "/TensorModel/");
+        strcpy(szDestination, "./TensorModel/");
     }
 
     memset(input, '\0', sizeof(input));
@@ -140,7 +140,9 @@ void CreateModelImage()
     strcat(szDestination, input);
 
     memset(modelFile, '\0', sizeof(modelFile));
+    printf("%s\n",szDestination);
     strcpy(modelFile, szDestination);  //"yolo.bin"
+    printf("%s\n",modelFile);
     ret = addFilesToModelUpdImg(modelFile, "aiModel_v1.1.zip");
     if(ret != 0)
         {printf(RED_BOLD" addFilesToModelUpdImg err= %d\n"RESET, ret);}
@@ -344,17 +346,17 @@ void deleteFile()
     //FileLocation[2][1024] ="/EVA-Example/CAROTA/aiUpdatePkg.zip";
 
     memset(FileLocation, 0 , sizeof(FileLocation));  
-    strcpy(FileLocation, "/aiModelOutputUpdImage_v1.1.zip");
+    strcpy(FileLocation, "./aiModelOutputUpdImage_v1.1.zip");
     sprintf(command, "rm -rf %s", FileLocation);
     system(command);
 
     memset(FileLocation, 0 , sizeof(FileLocation));  
-    strcpy(FileLocation, "/aiModel_v1.1.zip");
+    strcpy(FileLocation, "./aiModel_v1.1.zip");
     sprintf(command, "rm -rf %s", FileLocation);
     system(command);
 
     memset(FileLocation, 0 , sizeof(FileLocation));  
-    strcpy(FileLocation, "/aiUpdatePkg.zip");
+    strcpy(FileLocation, "./aiUpdatePkg.zip");
     sprintf(command, "rm -rf %s", FileLocation);
     system(command);
 }
@@ -369,7 +371,7 @@ int CreateAIConfig(char* sampleMode)
 
     memset(aiConfig, '\0', sizeof(aiConfig));
     memset(FileLocation, 0 , sizeof(FileLocation));  
-    strcpy(FileLocation, "/AI.zip");
+    strcpy(FileLocation, "./AI.zip");
 
     if( access( FileLocation, F_OK ) == 0 ) {
          sprintf(command, "rm -rf %s", FileLocation);
@@ -423,10 +425,10 @@ int CreatePipelineImagePack()
         printf("Path is :%s\n", CurrentWD);
 
         memset(updImgName, '\0', sizeof(updImgName));
-        strcpy(updImgName, "/AI.zip");
+        strcpy(updImgName, "./AI.zip");
 
         memset(packTarName, '\0', sizeof(packTarName));
-        strcpy(packTarName, "/EVAConfig.zip");
+        strcpy(packTarName, "./EVAConfig.zip");
 
         if (strlen(updImgName) == 0 || strlen(packTarName) == 0) {    
             printf("updImgName=%s,updImgVersion=%s,packTarName=%s\n",updImgName,updImgVersion,packTarName);
