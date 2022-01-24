@@ -1,0 +1,1 @@
+gst-launch-1.0 v4l2src ! videoconvert ! videoscale ! videorate ! video/x-raw, width=640, height=480, framerate=8/1 ! advino device=MYRIAD model=/home/adlink/vino-model/face.xml ! adtrans_ssd ! admetadrawer ! tee name=t ! queue ! videoconvert ! xvimagesink sync=false t.! queue ! videoconvert ! x264enc ! rtspclientsink name=sink location=rtsp://172.30.70.174:8554/myStream

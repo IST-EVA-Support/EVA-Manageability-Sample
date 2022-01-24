@@ -1,0 +1,4 @@
+INFERENCE_ENGINE=OpenVino
+MODEL_NAME=SSD              
+PRECISION=FP32                            
+VERSION=7.9               

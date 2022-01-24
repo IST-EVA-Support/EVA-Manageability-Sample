@@ -1,0 +1,1 @@
+gst-launch-1.0 filesrc location=/home/adlink/demo/PCBA_DEMO.avi ! decodebin ! videoconvert ! advino device=MYRIAD model=/home/adlink/vino-model/model_algo_1-0000.xml ! adtrans_ssd label=/home/adlink/vino-model/aoi.txt ! admetadrawer ! videoconvert ! xvimagesink

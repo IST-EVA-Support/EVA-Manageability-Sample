@@ -1,0 +1,1 @@
+gst-launch-1.0 filesrc location=/home/adlink/Videos/face.mp4 ! decodebin ! videoconvert ! advino device=MYRIAD model=/home/adlink/vino-model/face.xml ! adtrans_ssd ! admetadrawer ! videoconvert ! xvimagesink

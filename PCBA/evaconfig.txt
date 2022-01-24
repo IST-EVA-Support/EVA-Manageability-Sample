@@ -1,0 +1,1 @@
+gst-launch-1.0 multifilesrc location="/home/adlink/pcba/Bright_01_%01d.bmp" start-index=1 stop-index=20 caps="image/bmp,framerate=1/2" loop=true ! avdec_bmp ! videoconvert ! advino device=MYRIAD model=/home/adlink/vino-model/model_algo_1-0000.xml rgbconv=true ! adtrans_ssd label=/home/adlink/vino-model/aoi.txt threshold=0.5 ! admetadrawer ! videoconvert ! fpsdisplaysink

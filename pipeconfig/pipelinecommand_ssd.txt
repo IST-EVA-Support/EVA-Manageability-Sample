@@ -1,0 +1,2 @@
+gst-launch-1.0 v4l2src ! videoconvert ! videoscale ! videorate ! video/x-raw, width=1024, height=768, framerate=8/1 ! videoconvert ! advino device=MYRIAD model=/home/adlink/vino-model/ssd_mobilenet_v2_coco.xml ! adtrans_ssd label=/home/adlink/vino-model/label_ssd.txt threshold=0.5 ! admetadrawer ! videoconvert ! xvimagesink sync=false
+
