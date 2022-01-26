@@ -41,11 +41,11 @@ Running the ADLINK OTA agent
  // Running the package help file.
 ./carota -h
 ```
-There will list some properties that you can use or modify it.
+There will list some properties that you can modify it.
   ```c
   Option: 
         -p [ Adding EVA AI configuration into package]
-        -m [ Packing the AI config=> 0:Classfication(GoogleNet), 1:Face Detection(ssd), 2:PCBA(ssd), 3:Detection(yolo)], 4:Classfication(ssd), 5:Geofence(ssd), 6:Weardetection(ssd)
+        -m [ Packing the AI config=> 0:Classfication(GoogleNet), 1:Face Detection(ssd), 2:PCBA(ssd), 3:Detection(yolo), 4:Classfication(ssd), 5:Geofence(ssd), 6:Weardetection(ssd)
         -k [ Creating the new key and certificate.]
         -h [ This is help message. ]
   ```
