@@ -60,11 +60,11 @@ For example: (Pack the eva configuration file)
  //It will pack the `Face Detection` pipeline confiquration file. (OpenVino ssd)
 ./carota –p –m 1
 ```
-| m  | Center Aligned  | 
+| Property m (index)  | Description and Reference Link  | 
 | :------------ |:---------------:|
 | 0:Classfication(GoogleNet)     | Image Classification Inference by using goolgenet model         |
 | 1:Face Detection(ssd)     | Face detection by using MobileSSD model        |
-| 2:PCBA(ssd) | The AI model detect the Capacitors and Transistors on PCB board|
+| 2:PCBA(ssd) | The AI model detect the Capacitors and Transistors on PCB board by using MobileSSD  |
 | 3:Detection(yolo) | Real-Time Object Detection by using yoloV3       |
 | 4:Classfication(ssd) | Real-Time Object Detection by using MobileSSD       |
 | 5:Geofence(ssd) | https://github.com/IST-EVA-Support/EVA_Show-Case/tree/master/src/demo/geofence       |
