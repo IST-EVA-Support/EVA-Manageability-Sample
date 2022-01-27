@@ -60,6 +60,16 @@ For example: (Pack the eva configuration file)
  //It will pack the `Face Detection` pipeline confiquration file. (OpenVino ssd)
 ./carota –p –m 1
 ```
+| m  | Center Aligned  | 
+| :------------ |:---------------:|
+| 0:Classfication(GoogleNet)     | Image Classification Inference by using goolgenet model         |
+| 1:Face Detection(ssd)     | Face detection by using MobileSSD model        |
+| 2:PCBA(ssd) | The AI model detect the Capacitors and Transistors on PCB board|
+| 3:Detection(yolo) | Real-Time Object Detection by using yoloV3       |
+| 4:Classfication(ssd) | Real-Time Object Detection by using MobileSSD       |
+| 5:Geofence(ssd) | https://github.com/IST-EVA-Support/EVA_Show-Case/tree/master/src/demo/geofence       |
+| 6:Weardetection(ssd) | https://github.com/IST-EVA-Support/EVA_Show-Case/tree/master/src/demo/weardetection       |
+ 
 ### Preparing pipeline AI model package
 Preparing model file into `{source path}\Model` or `{source path}\TensorModel` folder 
 Modify your model schema definition as following
