@@ -89,16 +89,16 @@ VERSION=1.0
 ./carota –p
 ```
 The sample will pop up the message: 
-`Add model file into update image. Which model file do you want to add into image?
+`Add model file into update image. Which model file do you want to add into image? \
 OpenVino or TensorRT (O/T)?`  
  
-Choose appropriate model file. Then the sample will show the options step by step
+Choose appropriate model file. Then the sample will show the options step by step \
   
-`Would you like to sign the package?(Yes/No)`
+`Would you like to sign the package?(Yes/No)` \
 Choose whether to sign? 
 
-`Creating the package's version (For example: 1.1, 1.2)...`
-Choose the package version. Usually corresponds to the Model Schema `VERSION`.
+`Creating the package's version (For example: 1.1, 1.2)...` \
+Choose the package version. Usually corresponds to the Model Schema `VERSION`. \
   
 Finally, the package is ready when poping the following message.
 * Please upload the package into the carota server. `https://ota.sandbox.limios.net`
