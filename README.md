@@ -6,6 +6,8 @@ This reference code uses ADLINK managebility library for efficiently packaing AI
 Examples are provided for package AI model procedure. See the API reference section for detailed reference documentation of the C libraries. <h2>
   
 ## Dependencies 
+  
+  Before compiling Manageability library sample you need to install the following dependencies and compile them using CMake.
   Manageability library implement on `Ubuntu 18.04` and used `libsqlite3-0`、`zip/unzip`、`libssl1.1` etc. third party software package.
 * ADLINK managebility runtime library 4.0.X or newer
 * OpenSSL
@@ -28,7 +30,7 @@ Please downlad the model file and copy the `*bin` or `*.engine` to the path unde
 * TensorRT
   
 ## Compiling
-  
+ 
 ### Ubuntu (amd64/aarch64)
 Compiling the reference code by cmake script
 ```bash
@@ -41,7 +43,7 @@ Running the ADLINK OTA agent
  // Running the package help file.
 ./carota -h
 ```
-There will list some properties that you can modify it.
+There will list some properties that you can modify it. According to your requirement, you can use it for reference. This is for the convenience of packaging.
   ```c
   Option: 
         -p [ Adding EVA AI configuration into package]
@@ -99,6 +101,6 @@ Choose whether to sign?
 Choose the package version. Usually corresponds to the Model Schema `VERSION`.
   
 Finally, the package is ready when poping the following message.
-* Please upload the package into the carota server. https://ota.sandbox.limios.net 
-* Please record the `package id(PKGID)` form the UpdPkg_vX.X.Signed.zip
+* Please upload the package into the carota server. `https://ota.sandbox.limios.net`
+* Please record the `package id(PKGID)` form the `UpdPkg_vX.X.Signed.zip`
 * Please assign the `PKGID` to `target version`.
