@@ -62,7 +62,7 @@ For example: (Pack the eva configuration file)
  //It will pack the `Face Detection` pipeline confiquration file. (OpenVino ssd)
 ./carota –p –m 1
 ```
-| Property m (index)  | Description and Reference Link  | 
+| Property "m" (index)  | Description and Reference Link  | 
 | :------------ |:---------------:|
 | 0:Classfication(GoogleNet)     | Image Classification Inference by using goolgenet model         |
 | 1:Face Detection(ssd)     | Face detection by using MobileSSD model        |
